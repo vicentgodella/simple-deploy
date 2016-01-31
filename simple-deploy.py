@@ -9,7 +9,7 @@ cache_directory = tmp_directory + '/cache'
 
 def deploy(url):
     filename = tmp_directory + '/file.tar.gz'
-    os.system('aws s3 cp ' + url + ' ' + filename)
+    os.system('/usr/local/bin/aws s3 cp ' + url + ' ' + filename)
     os.system('rm -rf ' + cache_directory)
     os.makedirs(cache_directory)
     os.system('tar xfz ' + filename + ' -C ' + cache_directory)
