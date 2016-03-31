@@ -24,7 +24,7 @@ def install(environment):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Deploy a package.')
     parser.add_argument('url', help='S3 url of the package to install: s3://BUCKET/KEY.tar.gz')
-    parser.add_argument('environment', help='Environment', choices=["beta", "pre", "prod"])
+    parser.add_argument('environment', help='Environment')
 
     args = parser.parse_args()
     url = args.url
